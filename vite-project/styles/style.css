@@ -9,3 +9,14 @@
 body{
     background-color: rgb(250, 250, 250);
 }
+.card{
+    flex-wrap: wrap;
+    height: 40vh;
+    width: 30vh;
+    margin: 2.5rem 0.5rem;
+    background-color: #cb8edd;
+    align-items: center;
+    display: inline-flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
