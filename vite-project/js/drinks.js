@@ -1,12 +1,12 @@
 const drinks = [
     {
-        name: "water",
+        name: "Water",
         type: "still",
         price: "1",
         img: "https://5.imimg.com/data5/SELLER/Default/2021/3/VC/TC/QO/70500095/bibo-300-ml-packaged-drinking-water-1000x1000.jpg"
     },
     {
-        name: "sparkling water",
+        name: "Sparkling water",
         type: "carbonated",
         price: "1.99",
         img: "https://th.bing.com/th?id=OPHS.swKUAw9Jk4zXOg474C474&w=220&h=220&o=5&pid=21.1"
