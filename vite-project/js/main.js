@@ -5,6 +5,7 @@ const DOMSelectors = {
   button: document.getElementById("btn"),
   but: document.getElementById("but"),
   idk: document.querySelector("idk"),
+  light: document.getElementById("light")
 };
 document.querySelector(".light").addEventListener("click", function () {
   if(document.body.classList.contains("light")){
@@ -30,6 +31,7 @@ document.querySelector(".light").addEventListener("click", function () {
   }
 });
 
+
 const type = drinks.filter((drinks) => drinks.type != "still");
 console.log(type)
 drinks.forEach((drink) => DOMSelectors.card.insertAdjacentHTML("beforeend",`<div class="card"><h1> ${drink.name}</h1>img src="drink.img"</div>`))
@@ -44,12 +46,3 @@ DOMSelectors.but.addEventListener("click", function () {
   DOMSelectors.card.innerHTML = "";
   type.forEach((drink) => DOMSelectors.card.insertAdjacentHTML("beforeend",`<div class="card"><h1> ${drink.name}</h1>img src="drink.img"</div>`))
 })
-
-/* function remove() {
-    let buto = document.querySelectorAll(".btn");
-    buto.forEach((btn) => 
-        btn.addEventListener("click",  (clic) => {
-            clic.currentTarget.parentNode.remove();
-        })
-    );
-} */
