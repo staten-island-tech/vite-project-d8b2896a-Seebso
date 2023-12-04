@@ -1,13 +1,8 @@
-#app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-}
+html,
+body,
 body{
-    background-color: rgb(250, 250, 250);
+    align-items: center;
+    html {background-color: var(--primary)}
 }
 .card{
     flex-wrap: wrap;
@@ -24,7 +19,25 @@ body{
     margin: 1rem auto;
     display: flex;
     flex-wrap: wrap;
-    background-color: #ffffff;
+    html {background-color: var(--primary)}
     align-items: center;
     justify-content: space-around;
+}
+:root{
+  --light: #fbfbfb;
+  --dark: #434343;
+
+--primary: var(--light);
+--secondary: var(--dark);   
+}
+.light {
+    --primary: var(--light);
+    --secondary: var(--light);
+}
+.dark {
+    --primary: var(--dark);
+    --secondary: var(--dark);
+}
+.idk{
+    background-color: var(--dark);
 }
