@@ -40,3 +40,7 @@ body{
 .idk{
     background-color: var(--dark);
 }
+.image{
+    width: 50%;
+    height: 60%;
+}

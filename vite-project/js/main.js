@@ -5,9 +5,10 @@ const DOMSelectors = {
   button: document.getElementById("btn"),
   but: document.getElementById("but"),
   idk: document.querySelector("idk"),
-  light: document.getElementById("light")
+  light: document.getElementById("light"),
+  all: document.getElementById("all"),
 };
-document.querySelector(".light").addEventListener("click", function () {
+DOMSelectors.light.addEventListener("click", function () {
   if(document.body.classList.contains("light")){
     document.body.classList.add("dark");
     document.body.classList.remove("light");
@@ -34,15 +35,19 @@ document.querySelector(".light").addEventListener("click", function () {
 
 const type = drinks.filter((drinks) => drinks.type != "still");
 console.log(type)
-drinks.forEach((drink) => DOMSelectors.card.insertAdjacentHTML("beforeend",`<div class="card"><h1> ${drink.name}</h1>img src="drink.img"</div>`))
+drinks.forEach((drink) => DOMSelectors.card.insertAdjacentHTML("beforeend",`<div class="card"><h1> ${drink.name}</h1>,<img class="image" src="${drink.img}" alt=""></div>`))
 DOMSelectors.button.addEventListener("click", function () {
   const type = drinks.filter((drinks) => drinks.type != "still");
   DOMSelectors.card.innerHTML = "";
-  type.forEach((drink) => DOMSelectors.card.insertAdjacentHTML("beforeend",`<div class="card"><h1> ${drink.name}</h1>img src="drink.img"</div>`))
+  type.forEach((drink) => DOMSelectors.card.insertAdjacentHTML("beforeend",`<div class="card"><h1> ${drink.name}</h1>,<img class="image" src="${drink.img}" alt=""></div>`))
 console.log(type)
 })
 DOMSelectors.but.addEventListener("click", function () {
   const type = drinks.filter((drinks) => drinks.type != "carbonated");
   DOMSelectors.card.innerHTML = "";
-  type.forEach((drink) => DOMSelectors.card.insertAdjacentHTML("beforeend",`<div class="card"><h1> ${drink.name}</h1>img src="drink.img"</div>`))
+  type.forEach((drink) => DOMSelectors.card.insertAdjacentHTML("beforeend",`<div class="card"><h1> ${drink.name}</h1>,<img class="image" src="${drink.img}" alt=""></div>`))
+})
+DOMSelectors.all.addEventListener("click", function () {
+  DOMSelectors.card.innerHTML = "";
+  drinks.forEach((drink) => DOMSelectors.card.insertAdjacentHTML("beforeend",`<div class="card"><h1> ${drink.name}</h1>,<img class="image" src="${drink.img}" alt=""></div>`))
 })
