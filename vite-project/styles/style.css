@@ -2,7 +2,7 @@ html,
 body,
 body{
     align-items: center;
-    html {background-color: var(--primary)}
+    background-color: var(--primary);
 }
 .card{
     flex-wrap: wrap;
@@ -19,14 +19,13 @@ body{
     margin: 1rem auto;
     display: flex;
     flex-wrap: wrap;
-    html {background-color: var(--primary)}
     align-items: center;
+    background-color: var(--primary);
     justify-content: space-around;
 }
 :root{
   --light: #fbfbfb;
   --dark: #434343;
-
 --primary: var(--light);
 --secondary: var(--dark);   
 }
